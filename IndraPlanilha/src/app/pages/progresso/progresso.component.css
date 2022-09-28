@@ -1,0 +1,62 @@
+.background {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.grid {
+    width: 1130px;
+}
+
+h2 {
+    color: #004254;
+    font-weight: bold;
+}
+
+.cabecalho p{
+    margin: 0;
+    color: #868686;
+    font-weight: bold;
+}
+
+.metas {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.metas p{
+    margin: 0 0 0 10px;
+}
+
+.metas p:nth-child(2) {
+    color: #004254;
+    font-weight: bold;
+}
+
+.metas p:nth-child(4) {
+    color: #868686;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding-top: 7px;
+
+    text-align: center;
+
+    font: 20px Arial, sans-serif;
+    font-weight: bold;
+}
+
+.numberCircle:nth-child(1) {
+    background: #03657C;
+    color: white;
+}
+
+.numberCircle:nth-child(3) {
+    background: #FFC033;
+    color: #004254;
+    margin-left: 30px;
+}
