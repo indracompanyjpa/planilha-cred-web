@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -16,7 +18,9 @@ import { TableModule } from 'primeng/table';
   exports: [
     InputTextModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    BrowserModule,
+    BrowserAnimationsModule
   ]
 
 })

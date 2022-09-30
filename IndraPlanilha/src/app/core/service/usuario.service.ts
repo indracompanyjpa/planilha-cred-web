@@ -7,11 +7,11 @@ import { environment } from 'src/environments/environment';
 })
 export class UsuarioService {
 
-  api = `${environment.api}`
+  api = `${environment.api}`;
 
   constructor(private http: HttpClient) { }
 
   listarColaboradores() {
-    return this.http.get<any>(`${this.api}`);
+    return this.http.get<any>(this.api);
   }
 }

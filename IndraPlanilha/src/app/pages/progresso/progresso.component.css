@@ -8,6 +8,19 @@
     width: 1130px;
 }
 
+
+::ng-deep .progressgreen .p-progressbar .p-progressbar-value {
+    background: #19D02B;
+}
+
+::ng-deep .progressyellow .p-progressbar .p-progressbar-value {
+    background: #FFC033;
+}
+
+::ng-deep .progressred .p-progressbar .p-progressbar-value {
+    background: #FF3333;
+}
+
 h2 {
     color: #004254;
     font-weight: bold;
@@ -60,3 +73,19 @@ h2 {
     color: #004254;
     margin-left: 30px;
 }
+
+.p-element.p-sortable-column {
+    background-color: white;
+    color: #868686;
+    font-weight: normal;
+}
+
+.colaboradores {
+    margin: 3vh 0;
+}
+
+::ng-deep .p-selectable-row {
+    border: 1px solid #dee2e6;
+}
+
+

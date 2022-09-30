@@ -26,6 +26,41 @@
             "nome": "Jefte K. M. Mendonça",
             "rol": "Software Engineer",
             "porcentagem": 25
+        },
+
+        {
+            "id": 855319,
+            "nome": "Jobson J. O. R. Toscano",
+            "rol": "Software Engineer",
+            "porcentagem": 41
+        },
+ 
+        {
+            "id": 855319,
+            "nome": "Ana C. G. Santos",
+            "rol": "Software Engineer",
+            "porcentagem": 48
+        },
+
+        {
+            "id": 855319,
+            "nome": "Andre G. S. Azevedo",
+            "rol": "Software Engineer",
+            "porcentagem": 5
+        },
+
+        {
+            "id": 855319,
+            "nome": "Andre A. G. Viana",
+            "rol": "Software Engineer",
+            "porcentagem": 79
+        },
+
+        {
+            "id": 855319,
+            "nome": "Lamarck F. Martins",
+            "rol": "Software Engineer",
+            "porcentagem": 100
         }
     ]
 }

@@ -13,6 +13,9 @@ export class ProgressoComponent implements OnInit {
 
   usuario: Usuario[] = [];
 
+  metaAtingida: number = 0;
+  metaNaoAtingida: number = 0;
+
   loading: boolean = true;
 
   activityValues: number[] = [0, 100];
@@ -23,6 +26,14 @@ export class ProgressoComponent implements OnInit {
       this.usuarioService.listarColaboradores().subscribe(colaboradores => {
           this.usuario = colaboradores;
           this.loading = false;
+
+          this.usuario.forEach(value => {
+            if(value.porcentagem === 100) {
+              this.metaAtingida++;
+            } else {
+              this.metaNaoAtingida++;
+            }
+          })
       });
   }
 }
