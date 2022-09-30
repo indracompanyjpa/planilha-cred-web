@@ -13,6 +13,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginService } from './core/service/login.service';
 import { FormsModule } from '@angular/forms';
 
+import { TableModule } from 'primeng/table';
+import { SliderModule } from 'primeng/slider';
+import { ProgressBarModule } from 'primeng/progressbar';
+
+
 
 @NgModule({
   declarations: [
@@ -28,10 +33,14 @@ import { FormsModule } from '@angular/forms';
     ButtonModule,
     InputTextModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    TableModule,
+    SliderModule,
+    ProgressBarModule
   ],
 
   providers: [LoginService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
