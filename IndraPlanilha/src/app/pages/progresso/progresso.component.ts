@@ -6,7 +6,7 @@ import { UsuarioService } from 'src/app/core/service/usuario.service';
 @Component({
   selector: 'app-progresso',
   templateUrl: './progresso.component.html',
-  styleUrls: ['./progresso.component.css']
+  styleUrls: ['./progresso.component.css'],
 })
 
 export class ProgressoComponent implements OnInit {
@@ -20,20 +20,24 @@ export class ProgressoComponent implements OnInit {
 
   activityValues: number[] = [0, 100];
 
+  currentDate = new Date();
+
+  
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
-      this.usuarioService.listarColaboradores().subscribe(colaboradores => {
-          this.usuario = colaboradores;
-          this.loading = false;
+    this.usuarioService.listarColaboradores().subscribe(colaboradores => {
+      this.usuario = colaboradores;
+      this.loading = false;
 
-          this.usuario.forEach(value => {
-            if(value.porcentagem === 100) {
-              this.metaAtingida++;
-            } else {
-              this.metaNaoAtingida++;
-            }
-          })
+      this.usuario.forEach(value => {
+        if(value.porcentagem === 100) {
+          this.metaAtingida++;
+        } else {
+          this.metaNaoAtingida++;
+        }
       });
+      
+    });
   }
 }

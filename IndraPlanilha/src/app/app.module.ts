@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +16,15 @@ import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { SliderModule } from 'primeng/slider';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { ColaboradorComponent } from './pages/colaborador/colaborador.component';
+import { DataPipe } from './core/pipe/data.pipe';
+import { CommonModule } from '@angular/common';
+import { KnobModule } from 'primeng/knob';
 
+import { registerLocaleData } from '@angular/common';
+import localePT from '@angular/common/locales/pt';
+import { FooterComponent } from './components/footer/footer.component';
+registerLocaleData(localePT);
 
 
 @NgModule({
@@ -24,7 +32,10 @@ import { ProgressBarModule } from 'primeng/progressbar';
     AppComponent,
     HomeComponent,
     ProgressoComponent,
-    HeaderComponent
+    HeaderComponent,
+    ColaboradorComponent,
+    DataPipe,
+    FooterComponent
   ],
 
   imports: [
@@ -36,10 +47,15 @@ import { ProgressBarModule } from 'primeng/progressbar';
     FormsModule,
     TableModule,
     SliderModule,
-    ProgressBarModule
+    ProgressBarModule,
+    CommonModule,
+    KnobModule
   ],
 
-  providers: [LoginService],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-br' },
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 

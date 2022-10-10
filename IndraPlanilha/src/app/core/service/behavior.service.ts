@@ -8,7 +8,7 @@ import { Usuario } from '../interface/usuario';
 
 export class BehaviorService {
 
-  private usuarioData = new BehaviorSubject<Usuario>({nome: '', email: '', senha: '', porcentagem: 0});
+  private usuarioData = new BehaviorSubject<Usuario>({id: 0, nome: '', email: '', senha: '', rol: '', porcentagem: 0});
 
   constructor() { }
 

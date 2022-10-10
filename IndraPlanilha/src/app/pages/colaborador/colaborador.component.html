@@ -1,0 +1,36 @@
+<div class="background">
+    <div class="grid">
+        <div class="cabecalho col-6">
+            <p>{{usuario.id}}</p>
+            <h2>{{usuario.nome}}</h2>
+            <p>{{usuario.rol}}</p>
+        </div>
+        
+        <div class="metas col-6">
+            <div class="numberCircle">{{usuario.porcentagem}}</div>
+            <p>USTIBB enviado</p>
+            
+            <div class="numberCircle">{{UstibbRestante}}</div>
+            <p>USTIBB restante até a meta</p>
+        </div>
+
+        <div class="knob col-12 md:col-12">
+            <p-knob
+                [(ngModel)]="usuario.porcentagem"
+                valueTemplate="{value}%"
+                [readonly]="true"
+                textColor="#004254"
+                [size]="350"
+                [strokeWidth]="20"
+                valueColor="#03657C" rangeColor="#FFC033">
+            </p-knob>
+        </div>
+        <div class="data col-12 md:col-12">
+            <p>{{currentDate | date:'longDate':'pt-BR'}}</p>
+        </div>
+
+        <div class="col-12 md:col-12">
+            <button pButton pRipple type="button" label="RETORNAR" class="p-button-outlined p-button-secondary" routerLink="/progresso"></button>
+        </div>
+    </div>
+</div>
