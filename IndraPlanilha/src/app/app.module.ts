@@ -1,5 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProgressoComponent } from './pages/progresso/progresso.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginService } from './core/service/login.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { TableModule } from 'primeng/table';
 import { SliderModule } from 'primeng/slider';
@@ -20,10 +21,21 @@ import { ColaboradorComponent } from './pages/colaborador/colaborador.component'
 import { DataPipe } from './core/pipe/data.pipe';
 import { CommonModule } from '@angular/common';
 import { KnobModule } from 'primeng/knob';
+import { DialogModule } from 'primeng/dialog';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
+import { StepsModule } from 'primeng/steps';
+import { DropdownModule } from 'primeng/dropdown';
+import { CardModule } from 'primeng/card';
+import { FooterComponent } from './components/footer/footer.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 import { registerLocaleData } from '@angular/common';
 import localePT from '@angular/common/locales/pt';
-import { FooterComponent } from './components/footer/footer.component';
+import { Step01Component } from './components/step01/step01.component';
+import { StepsRoutingModule } from './module/steps/steps-routing.module';
+
 registerLocaleData(localePT);
 
 
@@ -35,13 +47,17 @@ registerLocaleData(localePT);
     HeaderComponent,
     ColaboradorComponent,
     DataPipe,
-    FooterComponent
+    FooterComponent,
+    ModalComponent,
+    Step01Component
   ],
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ButtonModule,
+    BrowserAnimationsModule,
     InputTextModule,
     HttpClientModule,
     FormsModule,
@@ -49,13 +65,27 @@ registerLocaleData(localePT);
     SliderModule,
     ProgressBarModule,
     CommonModule,
-    KnobModule
+    KnobModule,
+    DialogModule,
+    ConfirmDialogModule,
+    DynamicDialogModule,
+    StepsModule,
+    DropdownModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    CardModule,
+    StepsModule,
+    StepsRoutingModule
   ],
 
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-br' },
-    LoginService
+    ConfirmationService,
+    DialogService,
+    LoginService,
+    DynamicDialogModule
   ],
+
   bootstrap: [AppComponent]
 })
 

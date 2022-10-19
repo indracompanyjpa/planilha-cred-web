@@ -29,8 +29,12 @@
             <p>{{currentDate | date:'longDate':'pt-BR'}}</p>
         </div>
 
-        <div class="col-12 md:col-12">
-            <button pButton pRipple type="button" label="RETORNAR" class="p-button-outlined p-button-secondary" routerLink="/progresso"></button>
+        <div class="retornar col-6">
+            <button pButton pRipple type="button" label="RETORNAR" class="botao_retornar p-button-outlined p-button-secondary" routerLink="/progresso"></button>
+        </div>
+        <div class="adicionar col-6">
+            <button pButton pRipple type="button" label="ADICIONAR TAREFA" class="botao_adicionar" (click)="showDynamicDialog()"></button>
         </div>
     </div>
 </div>
+

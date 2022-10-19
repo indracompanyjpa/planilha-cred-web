@@ -1,0 +1,35 @@
+/* ::ng-deep .p-steps-item {
+    width: 20px;
+    background: red;
+} */
+
+::ng-deep .p-steps .p-steps-item:before {
+    border-top: 2px solid;
+    background: #03657C;
+    color: #03657C;
+}
+
+::ng-deep .p-steps .p-steps-item.p-highlight .p-steps-number {
+    background: #03657C;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    width: 900px;
+}
+
+.input_left {
+    margin-right: 15px;
+}
+
+.label_input {
+    color: #868686;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

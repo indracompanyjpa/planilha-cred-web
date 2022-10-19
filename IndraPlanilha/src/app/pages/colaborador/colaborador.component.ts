@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Usuario } from 'src/app/core/interface/usuario';
 import { UsuarioService } from 'src/app/core/service/usuario.service';
 
@@ -13,16 +15,18 @@ import { UsuarioService } from 'src/app/core/service/usuario.service';
 export class ColaboradorComponent implements OnInit {
 
   usuario = {} as Usuario;
-
   usuarioId: string | null = '';
-
   UstibbRestante: number = 0;
-
   currentDate = new Date();
 
+  ref: DynamicDialogRef | undefined;
 
 
-  constructor(private route: ActivatedRoute, private service: UsuarioService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private service: UsuarioService,
+    public dialogService: DialogService,
+  ) {}
 
   ngOnInit(): void {
     this.getUsuario();
@@ -33,6 +37,14 @@ export class ColaboradorComponent implements OnInit {
     this.service.listarColaboradorId(Number(this.usuarioId)).subscribe(response => {
       this.usuario = response;
       this.UstibbRestante = 100 - this.usuario.porcentagem;
+    });
+  }
+
+  showDynamicDialog(){
+    this.ref = this.dialogService.open(ModalComponent, {
+      header: 'Adicionar Tarefa',
+      width: 'auto',
+      height: 'auto'
     });
   }
 }
