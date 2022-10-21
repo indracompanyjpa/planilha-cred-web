@@ -37,7 +37,6 @@ export class ProgressoComponent implements OnInit {
           this.metaNaoAtingida++;
         }
       });
-      
     });
   }
 }

@@ -100,10 +100,20 @@ h2 {
     font-size: 13px;
 }
 
+.botao_tarefas {
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: #868686;
+    height: 40px;
+    width: 200px;
+    color: #868686;
+    font-size: 13px;
+}
+
 .botao_adicionar {
     outline: none;
     height: 40px;
-    width: auto;
+    width: 180px;
     color: white;
     background-color: #004254;
     font-size: 13px;

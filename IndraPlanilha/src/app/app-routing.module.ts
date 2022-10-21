@@ -5,12 +5,14 @@ import { Usuario } from './core/interface/usuario';
 import { ColaboradorComponent } from './pages/colaborador/colaborador.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProgressoComponent } from './pages/progresso/progresso.component';
+import { TarefasComponent } from './pages/tarefas/tarefas.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'progresso', component: ProgressoComponent},
   { path: 'progresso/:id', component: ColaboradorComponent},
+  { path: 'progresso/:id/tarefas', component: TarefasComponent},
 ];
 
 @NgModule({

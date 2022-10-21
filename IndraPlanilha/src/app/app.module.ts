@@ -39,6 +39,7 @@ import { Step03Component } from './pages/step03/step03.component';
 
 import { registerLocaleData } from '@angular/common';
 import localePT from '@angular/common/locales/pt';
+import { TarefasComponent } from './pages/tarefas/tarefas.component';
 
 registerLocaleData(localePT);
 
@@ -55,7 +56,8 @@ registerLocaleData(localePT);
     ModalComponent,
     Step01Component,
     Step02Component,
-    Step03Component
+    Step03Component,
+    TarefasComponent
   ],
 
   imports: [
