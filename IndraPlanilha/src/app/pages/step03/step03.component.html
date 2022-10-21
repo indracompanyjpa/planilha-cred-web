@@ -1,0 +1,33 @@
+<p-confirmDialog header="Confirmação" [style]="{width: '500px'}">
+    <ng-template pTemplate="footer">
+        <div class="confirmacao_botoes">
+            <button type="button" pButton label="CANCELAR" class="botao_cancelar p-button-outlined"></button>
+            <button type="button" pButton label="CONFIRMAR" class="botao_confirmar"></button>
+        </div>
+    </ng-template>
+</p-confirmDialog>
+
+<div class="stepsdemo-content">
+    <p-card>
+        <ng-template pTemplate="content">
+            <div class="grid p-fluid">
+                <div class="inputleft col-9">
+                    <label for="username1" class="label_input">Artefato</label>
+                    <textarea rows="7" pInputTextarea></textarea>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+            <div class="rodape grid">
+                <div class="retornar col-6">
+                    <button pButton pRipple type="button" label="RETORNAR" class="botao_seguinte" (click)="returnPage()"></button>
+                </div>
+
+                <div class="seguinte col-6">
+                    <button pButton pRipple type="button" label="SEGUINTE" class="botao_seguinte" (click)="confirm()"></button>
+                </div>
+            </div>
+        </ng-template>
+    </p-card>
+</div>

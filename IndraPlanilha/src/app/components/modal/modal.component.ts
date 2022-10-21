@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 
@@ -12,24 +13,28 @@ export class ModalComponent implements OnInit {
 
   items: MenuItem[] = [];
 
-  constructor() {}
+  activeIndex: number = 0;
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    this.items = [{
-      label: 'step01',
-      routerLink: 'step01'
-    },
+    this.items = [
     {
-      label: 'Seat',
-      routerLink: 'seat'
+      command: (event: any) => {
+        this.activeIndex = 0;
+        this.router.navigate(['/step01'])}
     },
+    
     {
-      label: 'Payment',
-      routerLink: 'payment'
+      command: (event: any) => {
+        this.activeIndex = 1;
+        this.router.navigate(['/step02'])}
     },
+    
     {
-      label: 'Confirmation',
-      routerLink: 'confirmation'
+      command: (event: any) => {
+        this.activeIndex = 2;
+        this.router.navigate(['/step03'])}
     }
   ];
   }

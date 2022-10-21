@@ -1,0 +1,34 @@
+::ng-deep .p-steps .p-steps-item:before {
+    border-top: 2px solid;
+    color: #03657C;
+    margin-top: -5px;
+}
+
+::ng-deep ul .p-steps-item:nth-child(1) {
+    justify-content: end;
+}
+
+::ng-deep .p-steps .p-steps-item:nth-child(1)::before {
+    width: 1px;
+    color: white;
+}
+
+::ng-deep ul .p-steps-item:nth-child(3) {
+    justify-content: start;
+}
+
+::ng-deep .p-steps .p-steps-item:nth-child(3)::before {
+    width: 1px;
+    color: white;
+}
+
+::ng-deep .p-steps .p-steps-item.p-highlight .p-steps-number {
+    background: #03657C;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+::ng-deep .p-card {
+    box-shadow: none;
+}

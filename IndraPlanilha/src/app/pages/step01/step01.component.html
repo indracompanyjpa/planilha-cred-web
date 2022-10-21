@@ -1,0 +1,43 @@
+<div class="stepsdemo-content">
+    <p-card>
+        <ng-template pTemplate="content">
+            <form [formGroup]="formGroup" class="grid p-fluid">
+                <div class="inputleft col-3">
+                    <label for="username1" class="label_input">ID Tarefa</label>
+                    <input [disabled]="!formGroup.valid" id="disabled-input" type="text" pInputText formControlName="nome"/>
+                </div>
+                <div class="col-6">
+                    <label for="username1" class="label_input">Disciplina</label>
+                    <p-dropdown [options]="cidades" formControlName="cidade" optionLabel="name"></p-dropdown>
+                </div>
+            
+                <div class="inputleft col-3">
+                    <label for="username1" class="label_input">Atividade</label>
+                    <p-dropdown [options]="cidades" formControlName="cidade" optionLabel="name"></p-dropdown>
+                </div>
+                <div class="col-6">
+                    <label for="username1" class="label_input">Descrição</label>
+                    <p-dropdown [options]="cidades" formControlName="cidade" optionLabel="name"></p-dropdown>
+                </div>
+            
+                <div class="inputleft col-3">
+                    <label for="username1" class="label_input">Plataforma</label>
+                    <input id="disabled-input" type="text" pInputText formControlName="nome"/>
+                </div>
+                <div class="col-6"></div>
+            </form>
+        </ng-template>
+        <ng-template pTemplate="footer">           
+            <div class="rodape grid">
+                <div class="retornar col-6">
+                    <button pButton pRipple type="button" label="RETORNAR" class="botao_retornar p-button-outlined p-button-secondary"></button>
+                </div>
+                
+                <div class="seguinte col-6">
+                    <button pButton pRipple type="button" label="SEGUINTE" class="botao_seguinte" (click)="nextPage()"></button>
+                </div>
+            </div>
+        </ng-template>
+    </p-card>
+</div>
+

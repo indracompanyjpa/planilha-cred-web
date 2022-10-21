@@ -119,3 +119,7 @@ h2 {
     align-items: center;
     justify-content: flex-end;
 }
+
+::ng-deep .card {
+    border: none;
+}

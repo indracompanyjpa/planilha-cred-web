@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 import { HttpClientModule } from '@angular/common/http';
 import { ProgressoComponent } from './pages/progresso/progresso.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -31,10 +32,13 @@ import { CardModule } from 'primeng/card';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalComponent } from './components/modal/modal.component';
 
+import { StepsRoutingModule } from './module/steps/steps-routing.module';
+import { Step01Component } from './pages/step01/step01.component';
+import { Step02Component } from './pages/step02/step02.component';
+import { Step03Component } from './pages/step03/step03.component';
+
 import { registerLocaleData } from '@angular/common';
 import localePT from '@angular/common/locales/pt';
-import { Step01Component } from './components/step01/step01.component';
-import { StepsRoutingModule } from './module/steps/steps-routing.module';
 
 registerLocaleData(localePT);
 
@@ -49,7 +53,9 @@ registerLocaleData(localePT);
     DataPipe,
     FooterComponent,
     ModalComponent,
-    Step01Component
+    Step01Component,
+    Step02Component,
+    Step03Component
   ],
 
   imports: [
@@ -75,7 +81,8 @@ registerLocaleData(localePT);
     ReactiveFormsModule,
     CardModule,
     StepsModule,
-    StepsRoutingModule
+    StepsRoutingModule,
+    InputTextareaModule
   ],
 
   providers: [

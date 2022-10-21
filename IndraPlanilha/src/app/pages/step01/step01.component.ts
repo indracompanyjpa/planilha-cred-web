@@ -16,15 +16,11 @@ interface Cidades {
 
 export class Step01Component implements OnInit {
 
-  items: MenuItem[];
-
   formGroup: FormGroup;
   cidades: Cidades[] = [];
+  
 
-  personalInformation: any;
-  submitted: boolean = false;
-
-  constructor( private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router) {
 
     this.formGroup = this.fb.group({
       nome: this.fb.control(''),
@@ -33,10 +29,8 @@ export class Step01Component implements OnInit {
       cidade: this.fb.control('')
     });
 
-    this.items = [];
-
     this.cidades = [
-      {name: 'Cabedelo'},
+      {name: ''},
       {name: 'João Pessoa'},
       {name: 'Guarabira'},
       {name: 'Lucena'},
@@ -46,22 +40,10 @@ export class Step01Component implements OnInit {
     ];
   }
 
-  ngOnInit(): void {
-    this.items = [
-      {label: 'Step 1'},
-      {label: 'Step 2'},
-      {label: 'Step 3'}
-    ];
-  }
+  ngOnInit(): void {}
 
   nextPage() {
-    if (this.personalInformation.firstname && this.personalInformation.lastname && this.personalInformation.age) {
-        this.router.navigate(['steps/seat']);
-
-        return;
-    }
-
-    this.submitted = true;
+    this.router.navigate(['step02']);
   }
 
 }
