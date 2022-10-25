@@ -106,10 +106,10 @@
 
         <div class="grid">
             <div class="retornar col-6">
-                <button pButton pRipple type="button" label="RETORNAR" class="botao_retornar p-button-outlined p-button-secondary"></button>
+                <button pButton pRipple type="button" label="RETORNAR" class="botao_retornar p-button-outlined p-button-secondary" routerLink="/progresso/{{usuario.id}}"></button>
             </div>
             <div class="adicionar col-6">
-                <button pButton pRipple type="button" label="ADICIONAR TAREFA" class="botao_adicionar" (click)="confirm()"></button>
+                <button pButton pRipple type="button" label="ADICIONAR TAREFA" class="botao_adicionar" (click)="showDynamicDialog()"></button>
             </div>
         </div>
     </div>

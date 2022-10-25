@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Usuario } from 'src/app/core/interface/usuario';
@@ -26,6 +26,7 @@ export class ColaboradorComponent implements OnInit {
     private route: ActivatedRoute,
     private service: UsuarioService,
     public dialogService: DialogService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -41,6 +42,7 @@ export class ColaboradorComponent implements OnInit {
   }
 
   showDynamicDialog(){
+    // this.router.navigate(['step01'])
     this.ref = this.dialogService.open(ModalComponent, {
       header: 'Adicionar Tarefa',
       width: 'auto',

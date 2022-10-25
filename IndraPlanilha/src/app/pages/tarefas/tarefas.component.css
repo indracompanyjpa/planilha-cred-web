@@ -195,3 +195,7 @@ i.pi.pi-pencil:hover {
     color: #00749e;
     transition: 0.1s;
 }
+
+::ng-deep .card {
+    border: none;
+}

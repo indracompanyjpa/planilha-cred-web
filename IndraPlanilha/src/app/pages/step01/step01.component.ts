@@ -18,15 +18,18 @@ export class Step01Component implements OnInit {
 
   formGroup: FormGroup;
   cidades: Cidades[] = [];
-  
+
 
   constructor(private fb: FormBuilder, private router: Router) {
-
+    
+    
     this.formGroup = this.fb.group({
       nome: this.fb.control(''),
       cpf: this.fb.control(''),
       nascimento: this.fb.control(''),
-      cidade: this.fb.control('')
+      cidade: this.fb.control(''),
+
+      desabilitar: [{value: '', disabled: true}],
     });
 
     this.cidades = [
@@ -40,10 +43,9 @@ export class Step01Component implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 
   nextPage() {
     this.router.navigate(['step02']);
   }
-
 }

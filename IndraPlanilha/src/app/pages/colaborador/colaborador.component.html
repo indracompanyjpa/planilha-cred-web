@@ -15,17 +15,19 @@
         </div>
 
         <div class="knob col-12 md:col-12">
-            <p-knob
-                [(ngModel)]="usuario.porcentagem"
-                valueTemplate="{value}%"
-                [readonly]="true"
-                textColor="#004254"
-                [size]="350"
-                [strokeWidth]="20"
-                valueColor="#03657C" rangeColor="#FFC033">
-            </p-knob>
+            <div class="fadein animation-duration-500 animation-iteration-1">
+                <p-knob
+                    [(ngModel)]="usuario.porcentagem"
+                    valueTemplate="{value}%"
+                    [readonly]="true"
+                    textColor="#004254"
+                    [size]="350"
+                    [strokeWidth]="20"
+                    valueColor="#03657C" rangeColor="#FFC033">
+                </p-knob>
+            </div>
         </div>
-        <div class="data col-12 md:col-12">
+        <div class="data col-12 md:col-12 fadeinup animation-ease-in-out animation-duration-300 animation-iteration-1">
             <p>{{currentDate | date:'longDate':'pt-BR'}}</p>
         </div>
 

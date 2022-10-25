@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ConfirmationService } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
@@ -40,7 +40,8 @@ export class TarefasComponent implements OnInit {
     private route: ActivatedRoute,
     private confirmationService: ConfirmationService,
     public dialogService: DialogService,
-    private tarefaService: TarefaService
+    private tarefaService: TarefaService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -50,13 +51,6 @@ export class TarefasComponent implements OnInit {
       this.tarefas = tarefas;
       this.loading = false;
     });
-
-
-    // if(value.porcentagem === 100) {
-    //   this.metaAtingida++;
-    // } else {
-    //   this.metaNaoAtingida++;
-    // }
   }
 
   getUsuario(){
@@ -75,6 +69,7 @@ export class TarefasComponent implements OnInit {
   }
 
   showDynamicDialog(){
+    this.router.navigate(['step01'])
     this.ref = this.dialogService.open(ModalComponent, {
       header: 'Adicionar Tarefa',
       width: 'auto',

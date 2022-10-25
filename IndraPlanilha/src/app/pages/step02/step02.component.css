@@ -1,3 +1,7 @@
+::ng-deep .card {
+    overflow-x: hidden;
+}
+
 .grid {
     display: flex;
     justify-content: center;

@@ -1,10 +1,10 @@
-<div class="stepsdemo-content">
+<div class="stepsdemo-content fadein animation-duration-700 animation-iteration-1">
     <p-card>
         <ng-template pTemplate="content">
             <form [formGroup]="formGroup" class="grid p-fluid">
                 <div class="inputleft col-3">
                     <label for="username1" class="label_input">ID Tarefa</label>
-                    <input [disabled]="!formGroup.valid" id="disabled-input" type="text" pInputText formControlName="nome"/>
+                    <input id="disabled-input" type="text" pInputText formControlName="desabilitar"/>
                 </div>
                 <div class="col-6">
                     <label for="username1" class="label_input">Disciplina</label>
@@ -22,21 +22,10 @@
             
                 <div class="inputleft col-3">
                     <label for="username1" class="label_input">Plataforma</label>
-                    <input id="disabled-input" type="text" pInputText formControlName="nome"/>
+                    <input id="disabled-input" type="text" pInputText formControlName="desabilitar"/>
                 </div>
                 <div class="col-6"></div>
             </form>
-        </ng-template>
-        <ng-template pTemplate="footer">           
-            <div class="rodape grid">
-                <div class="retornar col-6">
-                    <button pButton pRipple type="button" label="RETORNAR" class="botao_retornar p-button-outlined p-button-secondary"></button>
-                </div>
-                
-                <div class="seguinte col-6">
-                    <button pButton pRipple type="button" label="SEGUINTE" class="botao_seguinte" (click)="nextPage()"></button>
-                </div>
-            </div>
         </ng-template>
     </p-card>
 </div>

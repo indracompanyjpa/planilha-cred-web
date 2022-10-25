@@ -32,3 +32,47 @@
 ::ng-deep .p-card {
     box-shadow: none;
 }
+
+::ng-deep .p-dialog {
+    border-radius: 12px;
+    box-shadow: 0 1px 20px rgb(0 0 0 / 40%);
+}
+
+::ng-deep .p-dialog .p-dialog-header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+::ng-deep .p-dialog .p-dialog-content {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 0 0 2rem 0;
+}
+
+.botao_seguinte {
+    outline: none;
+    height: 40px;
+    width: 130px;
+    color: white;
+    background-color: #004254;
+    font-size: 13px;
+    border: none;
+}
+
+.botao_seguinte:hover {
+    background-color: #002d3a;
+}
+
+.seguinte {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rodape {
+    padding: 15px 0 0 85px;
+    max-width: 825px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

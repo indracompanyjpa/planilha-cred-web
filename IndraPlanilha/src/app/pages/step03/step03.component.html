@@ -1,13 +1,4 @@
-<p-confirmDialog header="Confirmação" [style]="{width: '500px'}">
-    <ng-template pTemplate="footer">
-        <div class="confirmacao_botoes">
-            <button type="button" pButton label="CANCELAR" class="botao_cancelar p-button-outlined"></button>
-            <button type="button" pButton label="CONFIRMAR" class="botao_confirmar"></button>
-        </div>
-    </ng-template>
-</p-confirmDialog>
-
-<div class="stepsdemo-content">
+<div class="stepsdemo-content fadein animation-duration-700 animation-iteration-1">
     <p-card>
         <ng-template pTemplate="content">
             <div class="grid p-fluid">
@@ -18,16 +9,25 @@
             </div>
         </ng-template>
 
-        <ng-template pTemplate="footer">
+        <!-- <ng-template pTemplate="footer">
             <div class="rodape grid">
                 <div class="retornar col-6">
                     <button pButton pRipple type="button" label="RETORNAR" class="botao_seguinte" (click)="returnPage()"></button>
                 </div>
 
                 <div class="seguinte col-6">
-                    <button pButton pRipple type="button" label="SEGUINTE" class="botao_seguinte" (click)="confirm()"></button>
+                    <button pButton pRipple type="button" label="ENVIAR" class="botao_seguinte" (click)="confirm()"></button>
                 </div>
             </div>
-        </ng-template>
+        </ng-template> -->
     </p-card>
 </div>
+
+<p-confirmDialog header="Confirmação" [style]="{width: '500px'}">
+    <ng-template pTemplate="footer">
+        <div class="confirmacao_botoes">
+            <button type="button" pButton label="CANCELAR" class="botao_cancelar p-button-outlined"></button>
+            <button type="button" pButton label="CONFIRMAR" class="botao_confirmar"></button>
+        </div>
+    </ng-template>
+</p-confirmDialog>
