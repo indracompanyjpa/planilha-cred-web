@@ -95,3 +95,7 @@ textarea {
 ::ng-deep .p-dialog .p-dialog-footer button{
     margin: 0 20px;
 }
+
+::ng-deep .p-inputtext {
+    background: white;
+}

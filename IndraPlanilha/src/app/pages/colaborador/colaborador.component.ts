@@ -42,7 +42,6 @@ export class ColaboradorComponent implements OnInit {
   }
 
   showDynamicDialog(){
-    // this.router.navigate(['step01'])
     this.ref = this.dialogService.open(ModalComponent, {
       header: 'Adicionar Tarefa',
       width: 'auto',

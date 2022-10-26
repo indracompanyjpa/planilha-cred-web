@@ -22,7 +22,6 @@ export class Step01Component implements OnInit {
 
   constructor(private fb: FormBuilder, private router: Router) {
     
-    
     this.formGroup = this.fb.group({
       nome: this.fb.control(''),
       cpf: this.fb.control(''),
@@ -48,4 +47,5 @@ export class Step01Component implements OnInit {
   nextPage() {
     this.router.navigate(['step02']);
   }
+
 }

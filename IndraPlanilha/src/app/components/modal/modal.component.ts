@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { Usuario } from 'src/app/core/interface/usuario';
 
 
 @Component({
@@ -11,15 +12,20 @@ import { MenuItem } from 'primeng/api';
 
 export class ModalComponent implements OnInit {
 
+  usuario = {} as Usuario;
+
   items: MenuItem[] = [];
 
   activeIndex: number = 0;
 
   stepRotas = [{index: 0, rota: '/step01'}, {index: 1, rota: '/step02'}, {index: 2, rota: '/step03'}];
 
+  
   constructor(private router: Router) {}
 
   ngOnInit() {
+    this.router.navigate(['step01'])
+    
     this.items = [
     {
       command: (event: any) => {
@@ -65,6 +71,10 @@ export class ModalComponent implements OnInit {
       this.activeIndex = rotaSelecionada[0].index;
       this.router.navigate([rotaSelecionada[0].rota])
     }
+  }
+
+  ngOnDestroy(id: number) {
+    // this.router.navigate(`${progresso}/${id}`);
   }
 }
 

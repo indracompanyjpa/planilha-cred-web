@@ -25,7 +25,9 @@ export class Step02Component implements OnInit {
       nome: this.fb.control(''),
       cpf: this.fb.control(''),
       nascimento: this.fb.control(''),
-      cidade: this.fb.control('')
+      cidade: this.fb.control(''),
+
+      desabilitar: [{value: '', disabled: true}],
     });
 
     this.cidades = [
