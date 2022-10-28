@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ConfirmationService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Tarefa } from 'src/app/core/interface/tarefa';
@@ -41,7 +41,7 @@ export class TarefasComponent implements OnInit {
     private confirmationService: ConfirmationService,
     public dialogService: DialogService,
     private tarefaService: TarefaService,
-    private router: Router
+    private messageService: MessageService
   ) {}
 
   ngOnInit() {
@@ -61,10 +61,12 @@ export class TarefasComponent implements OnInit {
     });
   }
 
-  confirm() {
+  excluir() {
     this.confirmationService.confirm({
         message: 'Você tem certeza que deseja excluir essa tarefas?',
-        accept: () => {},
+        accept: () => {
+          this.messageService.add({severity:'success', summary: 'Excluído', detail: 'A atividade foi excluída com sucesso!'});
+        },
     });
   }
 

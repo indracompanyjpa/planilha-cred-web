@@ -1,8 +1,10 @@
+<p-toast></p-toast>
+
 <p-confirmDialog #cd header="Excluir tarefa" [style]="{width: '500px'}">
     <ng-template pTemplate="footer">
         <div class="confirmacao_botoes">
-            <button type="button" pButton label="CANCELAR" class="botao_cancelar p-button-outlined" (click)="cd.reject()"></button>
-            <button type="button" pButton label="CONFIRMAR" class="botao_confirmar"></button>
+            <button type="button" pButton label="CANCELAR" class="botao_cancelar p-button-danger" (click)="cd.reject()"></button>
+            <button type="button" pButton label="CONFIRMAR" class="botao_confirmar" (click)="cd.accept()"></button>
         </div>
     </ng-template>
 </p-confirmDialog>
@@ -91,7 +93,7 @@
                         </td>
                         <td>
                             <span class="p-column-title">Icones</span>
-                            <a target="_blank" (click)="confirm()" class="excluir_tarefa"><i class="pi pi-trash"></i></a>
+                            <a target="_blank" (click)="excluir()" class="excluir_tarefa"><i class="pi pi-trash"></i></a>
                             <a target="_blank"><i class="pi pi-pencil"></i></a>
                         </td>
                     </tr>

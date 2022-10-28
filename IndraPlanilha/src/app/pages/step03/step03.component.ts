@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ConfirmationService } from 'primeng/api';
 
 
 @Component({
@@ -11,19 +10,12 @@ import { ConfirmationService } from 'primeng/api';
 
 export class Step03Component implements OnInit {
 
-  constructor(private router: Router, private confirmationService: ConfirmationService) { }
+  constructor( private router: Router ) {}
 
   ngOnInit(): void {
   }
 
   returnPage() {
     this.router.navigate(['step02']);
-  }
-
-  confirm() {
-    this.confirmationService.confirm({
-        message: 'Você tem certeza que deseja enviar as informações para a lista de tarefas?',
-        accept: () => {}
-    });
   }
 }

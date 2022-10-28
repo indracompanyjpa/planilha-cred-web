@@ -16,7 +16,7 @@ export class ProgressoComponent implements OnInit {
   metaAtingida: number = 0;
   metaNaoAtingida: number = 0;
 
-  loading: boolean = true;
+  loading: boolean = false;
 
   activityValues: number[] = [0, 100];
 
@@ -26,8 +26,10 @@ export class ProgressoComponent implements OnInit {
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
+    this.loading = true;
     this.usuarioService.listarColaboradores().subscribe(colaboradores => {
       this.usuario = colaboradores;
+      console.log(this.usuario)
       this.loading = false;
 
       this.usuario.forEach(value => {

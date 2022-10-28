@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MenuItem } from 'primeng/api';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ConfirmationService, MenuItem, MessageService } from 'primeng/api';
 import { Usuario } from 'src/app/core/interface/usuario';
 
 
@@ -21,11 +21,15 @@ export class ModalComponent implements OnInit {
   stepRotas = [{index: 0, rota: '/step01'}, {index: 1, rota: '/step02'}, {index: 2, rota: '/step03'}];
 
   
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private confirmationService: ConfirmationService,
+    private messageService: MessageService
+  ) {}
 
   ngOnInit() {
     this.router.navigate(['step01'])
-    
+
     this.items = [
     {
       command: (event: any) => {
@@ -72,9 +76,14 @@ export class ModalComponent implements OnInit {
       this.router.navigate([rotaSelecionada[0].rota])
     }
   }
-
-  ngOnDestroy(id: number) {
-    // this.router.navigate(`${progresso}/${id}`);
+  
+  enviar() {
+    this.confirmationService.confirm({
+        message: 'Você tem certeza que deseja enviar as informações para lista de tarefas?',
+        accept: () => {
+          this.messageService.add({severity:'success', summary: 'Enviado', detail: 'A atividade foi enviada com sucesso!'});
+        },
+    });
   }
 }
 

@@ -47,5 +47,9 @@ export class ColaboradorComponent implements OnInit {
       width: 'auto',
       height: 'auto'
     });
+
+    this.ref.onClose.subscribe(() => {
+      this.router.navigate([`progresso/${this.usuario.id}`]);
+    })
   }
 }

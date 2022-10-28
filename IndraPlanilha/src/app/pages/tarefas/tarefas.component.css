@@ -104,6 +104,8 @@ h2 {
 ::ng-deep .p-dialog .p-dialog-content {
     font-size: 17px;
     color: #737373;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .confirmacao_botoes {

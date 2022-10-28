@@ -1,6 +1,7 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxLoadingModule } from "ngx-loading";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { ProgressoComponent } from './pages/progresso/progresso.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginService } from './core/service/login.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 import { TableModule } from 'primeng/table';
 import { SliderModule } from 'primeng/slider';
@@ -25,7 +28,7 @@ import { KnobModule } from 'primeng/knob';
 import { DialogModule } from 'primeng/dialog';
 import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { ConfirmationService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { StepsModule } from 'primeng/steps';
 import { DropdownModule } from 'primeng/dropdown';
 import { CardModule } from 'primeng/card';
@@ -84,7 +87,10 @@ registerLocaleData(localePT);
     CardModule,
     StepsModule,
     StepsRoutingModule,
-    InputTextareaModule
+    InputTextareaModule,
+    ToastModule,
+    ProgressSpinnerModule,
+    NgxLoadingModule.forRoot({})
   ],
 
   providers: [
@@ -92,7 +98,8 @@ registerLocaleData(localePT);
     ConfirmationService,
     DialogService,
     LoginService,
-    DynamicDialogModule
+    DynamicDialogModule,
+    MessageService
   ],
 
   bootstrap: [AppComponent]
