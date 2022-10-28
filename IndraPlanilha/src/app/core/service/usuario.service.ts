@@ -6,9 +6,10 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsuarioService {
 
-  api = `${environment.api}`;
+  api = `${environment.api}/Colaboradores`;
 
   constructor(private http: HttpClient) { }
 

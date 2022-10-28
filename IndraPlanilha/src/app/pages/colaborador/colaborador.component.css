@@ -70,10 +70,17 @@ h2 {
     margin-top: 6vh;
 }
 
+::ng-deep .p-knob-text {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 .data {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2vh;
 }
 
 .data p{
@@ -83,13 +90,46 @@ h2 {
     margin-top: -2vh;
 }
 
-.p-button {
+.botao_retornar {
     outline-style: solid;
     outline-width: 1px;
     outline-color: #868686;
-    height: 6vh;
-    width: 19vh;
-    color: 868686;
+    height: 40px;
+    width: 130px;
+    color: #868686;
     font-size: 13px;
-    margin-top: 2vh;
+}
+
+.botao_tarefas {
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: #868686;
+    height: 40px;
+    width: 200px;
+    color: #868686;
+    font-size: 13px;
+}
+
+.botao_adicionar {
+    outline: none;
+    height: 40px;
+    width: 180px;
+    color: white;
+    background-color: #004254;
+    font-size: 13px;
+    border: none;
+}
+
+.botao_adicionar:hover {
+    background-color: #002d3a;
+}
+
+.adicionar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+::ng-deep .card {
+    border: none;
 }

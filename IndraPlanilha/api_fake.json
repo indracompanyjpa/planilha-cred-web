@@ -62,5 +62,23 @@
             "rol": "Software Engineer",
             "porcentagem": 100
         }
+    ],
+
+    "Tarefas": [
+        {
+            "id": 1,
+            "disciplina": "User Experience",
+            "atividade": "Usabilidade",
+            "quantidade": 2,
+            "ustibb": 40
+        },
+        
+        {
+            "id": 2,
+            "disciplina": "Implementação de Software",
+            "atividade": "Plataforma Distribuída",
+            "quantidade": 3,
+            "ustibb": 30
+        }
     ]
 }

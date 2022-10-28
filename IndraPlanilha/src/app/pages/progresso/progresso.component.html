@@ -15,7 +15,7 @@
         
         <div class="colaboradores col-12">
             <p-table #dt2 [value]="usuario" dataKey="id" styleClass="p-datatable-customers" [rowHover]="true"
-                [rows]="6" [showCurrentPageReport]="true" [rowsPerPageOptions]="[6,12,18]" [loading]="loading" responsiveLayout="scroll"
+                [rows]="6" [showCurrentPageReport]="true" [loading]="loading" responsiveLayout="scroll"
                 [paginator]="true" currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} colaboradores"
                 [filterDelay]="0" [globalFilterFields]="['id','nome','rol','porcentagem']">
                 <ng-template pTemplate="header">
@@ -23,35 +23,32 @@
                         <th pSortableColumn="id">
                             <div class="flex justify-content-between align-items-center">
                                 ID
-                                <p-sortIcon field="id"></p-sortIcon>
+                                <!-- <p-sortIcon field="id"></p-sortIcon> -->
                                 <!-- <p-columnFilter type="text" field="id" display="menu" class="ml-auto"></p-columnFilter> -->
                             </div>
                         </th>
                         <th pSortableColumn="nome">
                             <div class="flex justify-content-between align-items-center">
                                 Nome
-                                <p-sortIcon field="nome"></p-sortIcon>
-                                <!-- <p-columnFilter type="text" field="nome" display="menu" class="ml-auto"></p-columnFilter> -->
+                                <!-- <p-sortIcon field="nome"></p-sortIcon> -->
                             </div>
                         </th>
                         <th pSortableColumn="rol">
                             <div class="flex justify-content-between align-items-center">
                                 Rol
-                                <p-sortIcon field="rol"></p-sortIcon>
-                                <!-- <p-columnFilter type="text" field="rol" display="menu" class="ml-auto"></p-columnFilter> -->
+                                <!-- <p-sortIcon field="rol"></p-sortIcon> -->
                             </div>
                         </th>
                         <th pSortableColumn="porcentagem" >
                             <div class="flex justify-content-between align-items-center">
                                 Porcentagem
-                                <p-sortIcon field="porcentagem"></p-sortIcon>
-                                <!-- <p-columnFilter type="text" field="porcentagem" display="menu" class="ml-auto"></p-columnFilter> -->
+                                <!-- <p-sortIcon field="porcentagem"></p-sortIcon> -->
                             </div>
                         </th>
                         <th pSortableColumn="porcentagem">
                             <div class="flex justify-content-between align-items-center">
                                 Progresso
-                                <p-sortIcon field="porcentagem"></p-sortIcon>
+                                <!-- <p-sortIcon field="porcentagem"></p-sortIcon> -->
                             </div>
                         </th>
                     </tr>

@@ -8,7 +8,6 @@
     width: 1130px;
 }
 
-
 ::ng-deep .progressgreen .p-progressbar .p-progressbar-value {
     background: #19D02B;
 }
@@ -28,8 +27,9 @@ h2 {
 
 .cabecalho p{
     margin: 0;
-    color: #868686;
+    color: #8d8d8d;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .metas {
